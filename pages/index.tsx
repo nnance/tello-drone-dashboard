@@ -2,7 +2,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import { ThemeProvider } from "@material-ui/styles";
 import React from "react";
 import Dashboard from "./app/dashboard";
-import theme from "./theme";
+import theme from "../components/theme";
 
 export default function Index() {
   return (

@@ -1,4 +1,4 @@
-import { ISale } from "../structs/sales";
+import { ISale } from "../../structs/sales";
 import { NextApiRequest, NextApiResponse } from "next";
 
 // Generate Sales Data

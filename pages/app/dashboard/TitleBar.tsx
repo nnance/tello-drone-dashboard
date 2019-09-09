@@ -1,18 +1,20 @@
-import AppBar from "@material-ui/core/AppBar";
-import Badge from "@material-ui/core/Badge";
-import Divider from "@material-ui/core/Divider";
-import Drawer from "@material-ui/core/Drawer";
-import IconButton from "@material-ui/core/IconButton";
-import List from "@material-ui/core/List";
+import {
+  AppBar,
+  Badge,
+  Divider,
+  Drawer,
+  IconButton,
+  List,
+  Toolbar,
+  Typography,
+} from "@material-ui/core";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import MenuIcon from "@material-ui/icons/Menu";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import clsx from "clsx";
 import React from "react";
-import { mainListItems, secondaryListItems } from "./listItems";
+import { mainListItems, secondaryListItems } from "../../../components/listItems";
 
 const drawerWidth = 240;
 
@@ -114,7 +116,7 @@ export default function TitleBar() {
             <MenuIcon />
           </IconButton>
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-          Dashboard
+          Flight Dashboard
           </Typography>
           <IconButton color="inherit">
               <Badge badgeContent={0} color="secondary">

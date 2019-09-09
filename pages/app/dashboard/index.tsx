@@ -1,15 +1,21 @@
-import Container from "@material-ui/core/Container";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import Grid from "@material-ui/core/Grid";
-import Link from "@material-ui/core/Link";
-import Paper from "@material-ui/core/Paper";
+import {
+  Container,
+  Grid,
+  Link,
+  Paper,
+  Typography,
+} from "@material-ui/core";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
 import clsx from "clsx";
 import React from "react";
+import AccelConatiner from "./Accel";
 import Chart from "./Chart";
-import Deposits from "./Deposits";
-import Orders from "./Orders";
+import Controller from "./Controller";
+import SpeedConatiner from "./Speed";
+import Orders from "./StateLog";
+import StatsConatiner from "./Stats";
+import Status from "./Status";
 import TitleBar from "./TitleBar";
 
 function Copyright() {
@@ -64,24 +70,54 @@ export default function Dashboard() {
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
-          <Grid container spacing={3}>
-            {/* Chart */}
-            <Grid item xs={12} md={8} lg={9}>
-              <Paper className={fixedHeightPaper}>
-                <Chart />
-              </Paper>
+          <Grid container>
+            <Grid container item spacing={3} xs={10}>
+              {/* stats */}
+              <Grid item xs={12} md={8} lg={9}>
+                <Paper className={fixedHeightPaper}>
+                  <StatsConatiner />
+                </Paper>
+              </Grid>
+              {/* accel */}
+              <Grid item xs={12} md={8} lg={9}>
+                <Paper className={fixedHeightPaper}>
+                  <AccelConatiner />
+                </Paper>
+              </Grid>
+              {/* speed */}
+              <Grid item xs={12} md={8} lg={9}>
+                <Paper className={fixedHeightPaper}>
+                  <SpeedConatiner />
+                </Paper>
+              </Grid>
+              {/* Chart */}
+              <Grid item xs={12} md={8} lg={9}>
+                <Paper className={fixedHeightPaper}>
+                  <Chart />
+                </Paper>
+              </Grid>
             </Grid>
-            {/* Recent Deposits */}
-            <Grid item xs={12} md={4} lg={3}>
-              <Paper className={fixedHeightPaper}>
-                <Deposits />
-              </Paper>
+            <Grid container item xs={2}>
+                {/* Drone Status */}
+                <Grid item xs={12}>
+                  <Paper className={fixedHeightPaper}>
+                    <Status />
+                  </Paper>
+                </Grid>
+                {/* Drone Controller */}
+                <Grid item xs={12}>
+                  <Paper className={fixedHeightPaper}>
+                    <Controller />
+                  </Paper>
+                </Grid>
             </Grid>
-            {/* Recent Orders */}
-            <Grid item xs={12}>
-              <Paper className={classes.paper}>
-                <Orders />
-              </Paper>
+            <Grid container item xs={12}>
+              {/* Recent Orders */}
+              <Grid item xs={12}>
+                <Paper className={classes.paper}>
+                  <Orders />
+                </Paper>
+              </Grid>
             </Grid>
           </Grid>
         </Container>
