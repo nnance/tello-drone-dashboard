@@ -3,7 +3,7 @@ import App from 'next/app';
 import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Dashboard from "./app/dashboard";
+import Dashboard from "./dashboard";
 import theme from '../lib/theme';
 
 export default class MyApp extends App {

@@ -1,5 +1,7 @@
+import express from "express";
 import { ISale } from "../../lib/sales";
-import { NextApiRequest, NextApiResponse } from "next";
+
+const router = express.Router();
 
 // Generate Sales Data
 function createData(time: string, amount: number | undefined): ISale {
@@ -18,7 +20,9 @@ const data = [
     createData("24:00", undefined),
 ];
 
-export default (req: NextApiRequest, res: NextApiResponse) => {
-    res.status(200).json(data);
-  }
-  
+/* GET order listing. */
+router.get("/", (req, res) => {
+    res.json(data);
+  });
+
+export default router;

@@ -34,8 +34,8 @@ To run the application in development mode with live rebuild and reload
 ```
 ## TODO
 
-- [ ] move api out of pages to server using express
-- [ ] move dashboard out of app as only pages will exist now
+- [x] move api out of pages to server using express
+- [x] move dashboard out of app as only pages will exist now
 - [x] fix the base project build errors
 - [ ] apply master changes to tello-dashboard
 - [ ] fix tello-dashboard layouts

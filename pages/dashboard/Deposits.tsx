@@ -5,8 +5,8 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import { flow } from "lodash";
 import React from "react";
-import { decodeDeposits, IDeposits } from "../../../lib/deposits";
-import { callApi, getData, getDeposits } from "../../../lib/api";
+import { decodeDeposits, IDeposits } from "../../lib/deposits";
+import { callApi, getData, getDeposits } from "../../lib/api";
 import Title from "./Title";
 
 const useStyles = makeStyles({
