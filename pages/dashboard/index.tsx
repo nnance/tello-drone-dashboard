@@ -48,6 +48,9 @@ const useStyles = makeStyles((theme) => ({
   fixedHeight: {
     height: 240,
   },
+  statusHeight: {
+    height: 140,
+  },
   paper: {
     display: "flex",
     flexDirection: "column",
@@ -62,6 +65,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Dashboard() {
   const classes = useStyles(useTheme());
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+  const statusPaper = clsx(classes.paper, classes.statusHeight);
 
   return (
     <div className={classes.root}>
@@ -70,43 +74,43 @@ export default function Dashboard() {
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
-          <Grid container>
-            <Grid container item spacing={3} xs={10}>
+          <Grid container spacing={3}>
+            <Grid container item spacing={3} xs={8}>
               {/* stats */}
-              <Grid item xs={12} md={8} lg={9}>
+              <Grid item xs={12}>
                 <Paper className={fixedHeightPaper}>
                   <StatsConatiner />
                 </Paper>
               </Grid>
               {/* accel */}
-              <Grid item xs={12} md={8} lg={9}>
+              <Grid item xs={12}>
                 <Paper className={fixedHeightPaper}>
                   <AccelConatiner />
                 </Paper>
               </Grid>
               {/* speed */}
-              <Grid item xs={12} md={8} lg={9}>
+              <Grid item xs={12}>
                 <Paper className={fixedHeightPaper}>
                   <SpeedConatiner />
                 </Paper>
               </Grid>
               {/* Chart */}
-              <Grid item xs={12} md={8} lg={9}>
+              <Grid item xs={12}>
                 <Paper className={fixedHeightPaper}>
                   <Chart />
                 </Paper>
               </Grid>
             </Grid>
-            <Grid container item xs={2}>
+            <Grid container item xs={4} spacing={3} direction="column">
                 {/* Drone Status */}
-                <Grid item xs={12}>
-                  <Paper className={fixedHeightPaper}>
+                <Grid item>
+                  <Paper className={statusPaper}>
                     <Status />
                   </Paper>
                 </Grid>
                 {/* Drone Controller */}
-                <Grid item xs={12}>
-                  <Paper className={fixedHeightPaper}>
+                <Grid item>
+                  <Paper className={classes.paper}>
                     <Controller />
                   </Paper>
                 </Grid>
