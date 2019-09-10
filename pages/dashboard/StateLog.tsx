@@ -1,7 +1,7 @@
 import { Table, TableBody, TableCell, TableHead, TableRow } from "@material-ui/core";
 import React from "react";
-import { ITelloState } from "../../../structs/telloState";
-import { getSocketIOClient } from "../../../lib/api";
+import { ITelloState } from "../../structs/telloState";
+import { getSocketIOClient } from "../../lib/api";
 import Title from "./Title";
 
 export default function StateLog() {

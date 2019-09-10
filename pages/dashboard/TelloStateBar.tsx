@@ -2,8 +2,8 @@ import React from "react";
 import {
   Bar, BarChart, CartesianGrid, Tooltip, XAxis, YAxis,
 } from "recharts";
-import { ITelloState } from "../../../structs/telloState";
-import { getSocketIOClient } from "../../../lib/api";
+import { ITelloState } from "../../structs/telloState";
+import { getSocketIOClient } from "../../lib/api";
 
 function prop<T, K extends keyof T>(obj: T, key: K) {
     return obj[key];

@@ -1,5 +1,5 @@
 import React from "react";
-import { getSocketIOClient } from "../../../lib/api";
+import { getSocketIOClient } from "../../lib/api";
 import Title from "./Title";
 
 interface IDroneState {

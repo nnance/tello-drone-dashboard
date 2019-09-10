@@ -2,7 +2,7 @@ import React from 'react';
 import Title from './Title';
 import { Button } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/styles';
-import { getSocketIOClient } from '../../../lib/api';
+import { getSocketIOClient } from '../../lib/api';
 
 const useStyles = makeStyles({
   buttonContext: {
